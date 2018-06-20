@@ -1,7 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React,{Component} from 'react';
+import { Link } from 'react-router-dom'
 
-const List = (props) => {
+
+const TopicList = (props) => {
     const list = props.list;
     const listItem = list.map((item) => {
         return (
@@ -10,12 +11,12 @@ const List = (props) => {
                     <div className='item-header'>
                         <div className='sub-header-item'>
                             <img src={item.author.avatar_url}
-                                 alt={item.author.avatar_url}/>
+                                alt='头像' />
                             <label>{item.author.loginname}</label>
                         </div>
-                        <span
+                        <span 
                             className={item.good ? 'color-green' : 'color-red'}>
-                        {item.good ? '已解决' : '待解决'}
+                            {item.good ? '已解决' : '待解决'}
                         </span>
                     </div>
                     <div className='item-content'>
@@ -34,4 +35,4 @@ const List = (props) => {
     return <ul>{listItem}</ul>;
 
 }
-export default List;
+export default TopicList;

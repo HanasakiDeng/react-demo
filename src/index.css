@@ -10,12 +10,13 @@ a {
 }
 
 ul {
-    padding: 0;
+    padding: 0 0;
+    margin:0 0;
 }
 
 li {
     list-style: none;
-    padding: 0;
+    padding: 0 0;
 }
 
 .color-red {
@@ -41,7 +42,7 @@ img {
     margin: 40% auto;
     position: relative;
     -webkit-animation: load 1.7s infinite ease;
-    animation: load6 1.7s infinite ease;
+    animation: load 1.7s infinite ease;
 }
 
 @-webkit-keyframes load {
@@ -67,7 +68,7 @@ img {
     }
 }
 
-@keyframes load6 {
+@keyframes load {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
